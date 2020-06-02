@@ -1,18 +1,17 @@
-arr = [] 
-n = int(input("Enter number of elements : "))  
-for i in range(0, n): 
-    ele = int(input("Enter "  + str(i) +" th Element :  ")) 
-    arr.append(ele)
-print("array is :" ,arr)             
-flag = 0
-i = 1
-while i < len(arr): 
-    if(arr[i] < arr[i - 1]): 
-        flag = 1
-    i += 1
-      
-if (not flag) : 
-    print ("Yes, List is sorted.") 
-else : 
-    print ("No, List is not sorted.") 
+import math 
+def isPerfectSquare(x): 
+    s = int(math.sqrt(x)) 
+    return s*s == x 
+def isFibonacci(n): 
+    return isPerfectSquare(5*n*n + 4) or isPerfectSquare(5*n*n - 4) 
+     
+def ram(n):
+  for i in range(n): 
+     if (isFibonacci(i) == True): 
+         print ( i,"is a Fibonacci Number")
+     else: 
+         print (i,"is a not Fibonacci Number ")
+         
+num=int(input("ENTER THE RANGE: "))
+ram(num)
 
